@@ -1,5 +1,9 @@
 console.log("Welcome to dice game! Let's roll");
 
+function refresh(){
+    window.location.reload("Refresh")
+  }
+
 //for player 1
 //genrate random number from 1 -6 for player 1
 
@@ -33,11 +37,11 @@ var diceOfP2 = selectImageForP2.setAttribute("src",randomImageP2);
 //checking for the winner
 
 if (randomNumberP1 > randomNumberP2) {
-    document.querySelector('h1').innerHTML= ("Player 1 wins!");
+    document.getElementById('P1').innerHTML= ("Player 1 wins!");
 }
 else if (randomNumberP1 < randomNumberP2 ) {
-    document.querySelector('h1').innerHTML=("Player 2 wins!");
+    document.getElementById('P2').innerHTML=("Player 2 wins!");
 }
 else {
-    document.querySelector('h1').innerHTML=("It's draw!");
+    document.getElementById('Draw').innerHTML=("It's draw!");
 }
